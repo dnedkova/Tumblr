@@ -18,8 +18,6 @@ Here's walkthrough demos of implemented user stories:
 
 <img src='/tumblr.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-<img src='/dropbox-welcome.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 
