@@ -40,7 +40,7 @@ class TabBarViewController: UIViewController {
         buttons[selectedIndex].selected = true
         didPressTab(buttons[selectedIndex])
         
-        self.balloonImage.alpha = 1
+        showAnimatedBalloon()
         
     }
 
@@ -55,10 +55,7 @@ class TabBarViewController: UIViewController {
 
                 self.balloonImage.alpha = 0            })
         } else {
-            self.balloonImage.alpha = 1
-            UIView.animateWithDuration(1.2, delay: 0, options: [.Repeat, .Autoreverse], animations: { () -> Void in
-                self.balloonImage.transform = CGAffineTransformMakeTranslation(0, -4)
-                }, completion: nil)
+            showAnimatedBalloon()
             
         }
     
@@ -82,6 +79,13 @@ class TabBarViewController: UIViewController {
         vc.didMoveToParentViewController(self)
         
     }
+    
+    func showAnimatedBalloon(){
+        self.balloonImage.alpha = 1
+        UIView.animateWithDuration(1.2, delay: 0, options: [.Repeat, .Autoreverse], animations: { () -> Void in
+            self.balloonImage.transform = CGAffineTransformMakeTranslation(0, -4)
+            }, completion: nil)
+    }
   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -97,7 +101,7 @@ class TabBarViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         // Access the ViewController that you will be transitioning too, a.k.a, the destinationViewController.
-        var destinationViewController = segue.destinationViewController
+        let destinationViewController = segue.destinationViewController
         
         // Set the modal presentation style of your destinationViewController to be custom.
         destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
