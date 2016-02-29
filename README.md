@@ -9,7 +9,7 @@ Submitted by: Diana Nedkova
 * [x] Compose button should modally present the compose screen.
 * [x] Optional: Compose screen is faded in while the buttons animate in.
 * [x] Optional: Login button should show animate the login form over the view controller.
-* [ ] Optional: Discover bubble should bob up and down unless the SearchViewController is tapped.
+* [x] Optional: Discover bubble should bob up and down unless the SearchViewController is tapped.
 
 
 ## Video Walkthrough 
