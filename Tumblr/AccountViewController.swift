@@ -9,6 +9,8 @@
 import UIKit
 
 class AccountViewController: UIViewController {
+    
+    var fadeTransition: FadeTransition!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +21,25 @@ class AccountViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        // Access the ViewController that you will be transitioning too, a.k.a, the destinationViewController.
+        let destinationViewController = segue.destinationViewController
+        
+        // Set the modal presentation style of your destinationViewController to be custom.
+        destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
+        
+        // Create a new instance of your fadeTransition.
+        fadeTransition = FadeTransition()
+        
+        // Tell the destinationViewController's  transitioning delegate to look in fadeTransition for transition instructions.
+        destinationViewController.transitioningDelegate = fadeTransition
+        
+        // Adjust the transition duration. (seconds)
+        fadeTransition.duration = 1.0
     }
     
 

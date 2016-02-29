@@ -23,6 +23,8 @@ class ComposeViewController: UIViewController {
     var yInitial : [CGFloat] = []
     var buttons : [UIButton] = []
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -80,6 +82,8 @@ class ComposeViewController: UIViewController {
 
         
     }
+    
+
 
     /*
     // MARK: - Navigation
@@ -92,6 +96,32 @@ class ComposeViewController: UIViewController {
     */
 
     @IBAction func onTapNevermind(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+        
+        self.photoButton.transform = CGAffineTransformMakeTranslation(0, -700)
+        
+        UIView.animateWithDuration(0.2, animations: { () -> Void in
+            self.chatButton.transform = CGAffineTransformMakeTranslation(0, -700)
+        })
+        
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
+            self.quoteButton.transform = CGAffineTransformMakeTranslation(0, -700)
+        })
+        
+        UIView.animateWithDuration(0.4, animations: { () -> Void in
+            self.textButton.transform = CGAffineTransformMakeTranslation(0, -700)
+        })
+        
+        UIView.animateWithDuration(0.6, animations: { () -> Void in
+            self.linkButton.transform = CGAffineTransformMakeTranslation(0, -700)
+        })
+        
+        UIView.animateWithDuration(0.7, animations: { () -> Void in
+            self.videoButton.transform = CGAffineTransformMakeTranslation(0, -700)
+            }) { (Bool) -> Void in
+                self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        
+    
+        
     }
 }

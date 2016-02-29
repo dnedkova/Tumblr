@@ -19,6 +19,8 @@
 		CA73C9801C7FCA0F00B77E5A /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA73C97F1C7FCA0F00B77E5A /* AccountViewController.swift */; };
 		CA73C9821C7FCA3A00B77E5A /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA73C9811C7FCA3A00B77E5A /* TrendingViewController.swift */; };
 		CA73C9841C82DC8300B77E5A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA73C9831C82DC8300B77E5A /* LogInViewController.swift */; };
+		CA73C9871C83BF7C00B77E5A /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA73C9851C83BF7C00B77E5A /* BaseTransition.swift */; };
+		CA73C9881C83BF7C00B77E5A /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA73C9861C83BF7C00B77E5A /* FadeTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		CA73C97F1C7FCA0F00B77E5A /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		CA73C9811C7FCA3A00B77E5A /* TrendingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
 		CA73C9831C82DC8300B77E5A /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		CA73C9851C83BF7C00B77E5A /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseTransition.swift; path = Tumblr/BaseTransition.swift; sourceTree = SOURCE_ROOT; };
+		CA73C9861C83BF7C00B77E5A /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FadeTransition.swift; path = Tumblr/FadeTransition.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 				CA73C9791C7FC9CE00B77E5A /* HomeViewController.swift */,
 				CA73C97B1C7FC9E600B77E5A /* SearchViewController.swift */,
 				CA73C97D1C7FC9FB00B77E5A /* ComposeViewController.swift */,
+				CA73C9851C83BF7C00B77E5A /* BaseTransition.swift */,
+				CA73C9861C83BF7C00B77E5A /* FadeTransition.swift */,
 				CA73C97F1C7FCA0F00B77E5A /* AccountViewController.swift */,
 				CA73C9811C7FCA3A00B77E5A /* TrendingViewController.swift */,
 				CA73C9771C7FC68500B77E5A /* TabBarViewController.swift */,
@@ -157,10 +163,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA73C97C1C7FC9E600B77E5A /* SearchViewController.swift in Sources */,
+				CA73C9871C83BF7C00B77E5A /* BaseTransition.swift in Sources */,
 				CA73C9821C7FCA3A00B77E5A /* TrendingViewController.swift in Sources */,
 				CA73C9841C82DC8300B77E5A /* LogInViewController.swift in Sources */,
 				CA73C9681C7FC5F000B77E5A /* ViewController.swift in Sources */,
 				CA73C9801C7FCA0F00B77E5A /* AccountViewController.swift in Sources */,
+				CA73C9881C83BF7C00B77E5A /* FadeTransition.swift in Sources */,
 				CA73C9781C7FC68500B77E5A /* TabBarViewController.swift in Sources */,
 				CA73C97E1C7FC9FB00B77E5A /* ComposeViewController.swift in Sources */,
 				CA73C9661C7FC5F000B77E5A /* AppDelegate.swift in Sources */,

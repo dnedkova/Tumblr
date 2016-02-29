@@ -22,6 +22,8 @@ class TabBarViewController: UIViewController {
     var viewControllers: [UIViewController]!
     var selectedIndex: Int = 0
     
+  
+    var fadeTransition: FadeTransition!
     @IBOutlet weak var balloonImage: UIImageView!
     
     override func viewDidLoad() {
@@ -49,15 +51,14 @@ class TabBarViewController: UIViewController {
         selectedIndex = sender.tag
         
         if selectedIndex == 1 {
-            UIView.animateWithDuration(0.4, animations: {
+            UIView.animateWithDuration(0.2, animations: {
 
                 self.balloonImage.alpha = 0            })
-        }
-        else {
-            
-            UIView.animateWithDuration(0.4, animations: {
-                
-                self.balloonImage.alpha = 1            })
+        } else {
+            self.balloonImage.alpha = 1
+            UIView.animateWithDuration(1.2, delay: 0, options: [.Repeat, .Autoreverse], animations: { () -> Void in
+                self.balloonImage.transform = CGAffineTransformMakeTranslation(0, -4)
+                }, completion: nil)
             
         }
     
@@ -92,6 +93,25 @@ class TabBarViewController: UIViewController {
     @IBAction func onTapComposeButton(sender: AnyObject) {
         performSegueWithIdentifier("composeSegue", sender: nil)
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        // Access the ViewController that you will be transitioning too, a.k.a, the destinationViewController.
+        var destinationViewController = segue.destinationViewController
+        
+        // Set the modal presentation style of your destinationViewController to be custom.
+        destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
+        
+        // Create a new instance of your fadeTransition.
+        fadeTransition = FadeTransition()
+        
+        // Tell the destinationViewController's  transitioning delegate to look in fadeTransition for transition instructions.
+        destinationViewController.transitioningDelegate = fadeTransition
+        
+        // Adjust the transition duration. (seconds)
+        fadeTransition.duration = 1.0
+    }
+    
  
 
     /*

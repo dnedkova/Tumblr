@@ -33,7 +33,7 @@
                                         <state key="normal" image="compose_button"/>
                                         <state key="selected" image="app_icon"/>
                                         <connections>
-                                            <segue destination="fJL-22-JDZ" kind="modal" id="0LS-dN-bNU"/>
+                                            <segue destination="fJL-22-JDZ" kind="modal" identifier="composeSegue" animates="NO" id="0LS-dN-bNU"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7UD-FM-K9c" userLabel="Account">
@@ -111,6 +111,13 @@
                                 <rect key="frame" x="1" y="322" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iL7-TD-dG8">
+                                <rect key="frame" x="259" y="29" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="tUe-FZ-oXV" kind="modal" animates="NO" id="oab-I7-W5U"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -189,7 +196,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.20000000000000001" green="0.27843137254901962" blue="0.36078431372549019" alpha="0.54334590517241377" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.27843137254901962" blue="0.36078431372549019" alpha="0.89531249999999996" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="chatButton" destination="fd6-RQ-hLU" id="2I2-9k-Ns7"/>
@@ -202,7 +209,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HaJ-sP-Rzb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="882" y="1038"/>
+            <point key="canvasLocation" x="933" y="454"/>
         </scene>
         <!--Account View Controller-->
         <scene sceneID="niB-tr-N9s">
@@ -274,7 +281,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.20000000000000001" green="0.27843137254901962" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.27843137254901962" blue="0.36078431372549019" alpha="0.90859374999999998" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="emailField" destination="mg4-fI-SAV" id="ghv-Jx-V8R"/>
@@ -344,4 +351,7 @@
         <image name="trending_selected_icon" width="35" height="35"/>
         <image name="video_icon" width="75" height="95"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="oab-I7-W5U"/>
+    </inferredMetricsTieBreakers>
 </document>
